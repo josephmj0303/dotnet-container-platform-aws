@@ -297,10 +297,15 @@ Possible upgrades for a production platform:
 # 📸 Screenshots
 
 * CI/CD pipeline execution
+  
   ![deployment-workflow](docs/screenshots/deployment-workflow.png)
+  
 * Docker containers running
+  
   ![container-status](docs/screenshots/container-status.png)
+  
 * Application UI
+  
   ![finance-app-activation](docs/screenshots/finance-app-activation.png)
   
   ![inventory-app-activation](docs/screenshots/inventory-app-activation.png)
