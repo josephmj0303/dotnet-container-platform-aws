@@ -73,7 +73,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
 
-          cd /home/dotnet/dotnet-container-platform-aws
+          cd /home/ubuntu/dotnet-container-platform-aws
           echo "Pulling latest images..."
           docker compose pull
           echo "Restarting containers..."
