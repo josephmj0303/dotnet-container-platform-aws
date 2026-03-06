@@ -34,25 +34,7 @@ The project demonstrates practical DevOps skills including:
 
 # 🏗 Architecture
 
-```
-                         Internet
-                            │
-                        Route53 DNS
-                            │
-                         AWS EC2
-                            │
-                          Nginx
-                            │
-      ┌─────────────┐─────────────┐───────────────┐
-      │             │             │               │
-  finance       inventory       school        vivahadeepam
-  container     container     container        contianer
-      │             │             │               │
-      └─────────────── Docker Network ────────────┘
-                             │
-                        MSSQL Server
-                          Container
-```
+![Architecture-diagram](docs/architecture/architecture-diagram.png)
 
 ---
 
@@ -289,9 +271,7 @@ docker compose up -d
 
 ---
 
-# Security Considerations
-
-Production deployments should include:
+# 🔐 Security Practices
 
 * HTTPS using SSL certificates
 * Secrets management using AWS Secrets Manager
@@ -314,14 +294,20 @@ Possible upgrades for a production platform:
 
 ---
 
-# Screenshots
+# 📸 Screenshots
 
-Add screenshots for:
-
-* AWS EC2 instance
-* Docker containers running
-* Application UI
 * CI/CD pipeline execution
+  ![deployment-workflow](docs/screenshots/deployment-workflow.png)
+* Docker containers running
+  ![container-status](docs/screenshots/container-status.png)
+* Application UI
+  ![finance-app-activation](docs/screenshots/finance-app-activation.png)
+  
+  ![inventory-app-activation](docs/screenshots/inventory-app-activation.png)
+  
+  ![school-app-activation](docs/screenshots/school-app-activation.png)
+  
+  ![vivahadeepam-app-activation](docs/screenshots/vivahadeepam-app-activation.png)
 
 ---
 
