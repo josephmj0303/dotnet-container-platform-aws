@@ -267,19 +267,24 @@ GitHub Actions automates the deployment workflow.
 Pipeline stages:
 
 ```
-Code Commit
-     │
-     ▼
-Build Docker Images
-     │
-     ▼
-Push Images to Registry
-     │
-     ▼
-Deploy to AWS EC2
-     │
-     ▼
-Restart Docker Containers
+Developer Push Code
+        │
+        ▼
+GitHub Actions Trigger
+        │
+        ▼
+Matrix Build (4 images in parallel)
+        │
+        ▼
+Push Images → DockerHub
+        │
+        ▼
+SSH Deploy to EC2
+        │
+        ▼
+docker compose pull
+docker compose up -d
+
 ```
 
 ---
