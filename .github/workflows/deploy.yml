@@ -74,6 +74,7 @@ jobs:
         script: |
 
           cd /home/ubuntu/dotnet-container-platform-aws
+          git pull origin main
           echo "Pulling latest images..."
           docker compose pull
           echo "Restarting containers..."
