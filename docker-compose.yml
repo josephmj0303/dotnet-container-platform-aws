@@ -1,0 +1,92 @@
+version: '3.9'
+
+services:
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql2022
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ${SA_PASSWORD}
+    volumes:
+      - mssql_data:/var/opt/mssql
+      - ./mssql/backup:/var/opt/mssql/backup
+      - ./mssql/restore.sql:/var/opt/mssql/restore.sql
+    command: >
+      /bin/bash -c "
+      /opt/mssql/bin/sqlservr &
+      sleep 25 &&
+      /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P ${SA_PASSWORD} -i /var/opt/mssql/restore.sql;
+      wait"
+    networks:
+      - dotnetnet
+
+  finance:
+    image: josephmj0303/finance-app:latest
+    container_name: finance_app
+    ports:
+      - "5004:5004"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:5004
+      ConnectionStrings__DefaultConnection: ${FINANCE_DB_CONN}
+      DatabaseName: financedb
+      DataBasePath: /app/data/
+    depends_on:
+      - mssql
+    networks:
+      - dotnetnet
+
+  inventory:
+    image: josephmj0303/inventory-app:latest
+    container_name: inventory_app
+    ports:
+      - "5002:5002"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:5002
+      ConnectionStrings__DefaultConnection: ${INVENTORY_DB_CONN}
+      DatabaseName: inventorydb
+      DataBasePath: /app/data/
+    depends_on:
+      - mssql
+    networks:
+      - dotnetnet
+
+  school:
+    image: josephmj0303/school-app:latest
+    container_name: school_app
+    ports:
+      - "5001:5001"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:5001
+      ConnectionStrings__DefaultConnection: ${SCHOOL_DB_CONN}
+      DatabaseName: schooldb
+      DataBasePath: /app/data/
+    depends_on:
+      - mssql
+    networks:
+      - dotnetnet
+
+  vivahadeepam:
+    image: josephmj0303/vivahadeepam-app:latest
+    container_name: viva_app
+    ports:
+      - "5003:5003"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:5003
+      ConnectionStrings__DefaultConnection: ${VIVA_DB_CONN}
+      DatabaseName: vivahadeepamdb
+      DataBasePath: /app/data/
+    depends_on:
+      - mssql
+    networks:
+      - dotnetnet
+
+volumes:
+  mssql_data:
+
+networks:
+  dotnetnet:
