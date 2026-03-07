@@ -1,4 +1,11 @@
 # 🚀 Dotnet Container Platform on AWS
+![.NET](https://img.shields.io/badge/.NET-7.0-purple?logo=dotnet)
+![Docker](https://img.shields.io/badge/Container-Docker-blue?logo=docker)
+![AWS](https://img.shields.io/badge/Cloud-AWS-orange?logo=amazonaws)
+![Nginx](https://img.shields.io/badge/Proxy-Nginx-green?logo=nginx)
+![CI/CD](https://img.shields.io/badge/CI/CD-GitHub_Actions-black?logo=githubactions)
+![DockerHub](https://img.shields.io/badge/Registry-DockerHub-blue?logo=docker)
+![DevOps](https://img.shields.io/badge/Project-DevOps-blueviolet)
 
 Production-style deployment of multiple ASP.NET Core applications using Docker containers on AWS EC2 with Microsoft SQL Server and Nginx reverse proxy.
 
