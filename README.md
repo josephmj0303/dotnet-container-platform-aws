@@ -90,8 +90,17 @@ dotnet-container-platform-aws
 ├── docker-compose.yml
 ├── .env
 │
-├── architecture
-│   └── aws-dotnet-container-architecture.png
+├── docs
+│   ├── architecture
+│   │   └── architecture-diagram.png
+│   │
+│   └── screenshots
+│       ├── container-running.png    
+│       ├── workflow-success.png
+│       ├── school-app.png
+│       └── vivahadeepam-app.png
+│
+├── LICENSE    
 │
 └── README.md
 ```
@@ -305,21 +314,17 @@ Possible upgrades for a production platform:
 
 * CI/CD pipeline execution
   
-  ![deployment-workflow](docs/screenshots/deployment-workflow.png)
+  ![deployment-workflow](docs/screenshots/workflow-success.png)
   
 * Docker containers running
   
-  ![container-status](docs/screenshots/container-status.png)
+  ![container-status](docs/screenshots/container-running.png)
   
 * Application UI
   
-  ![finance-app-activation](docs/screenshots/finance-app-activation.png)
+   ![school-app-activation](docs/screenshots/school-app.png)
   
-  ![inventory-app-activation](docs/screenshots/inventory-app-activation.png)
-  
-  ![school-app-activation](docs/screenshots/school-app-activation.png)
-  
-  ![vivahadeepam-app-activation](docs/screenshots/vivahadeepam-app-activation.png)
+  ![vivahadeepam-app-activation](docs/screenshots/vivahadeepam-app.png)
 
 ---
 
