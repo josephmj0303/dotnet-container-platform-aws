@@ -1,0 +1,17 @@
+## Application Source Code (Private)
+
+The application source code has been moved to a private repository 
+to reflect real-world security practices.
+
+The project demonstrates practical DevOps skills including:
+
+- Containerization of .NET applications
+- Multi-service Docker architecture
+- Automated database restoration
+- Reverse proxy routing
+- Cloud deployment on AWS
+- Production style infrastructure layout
+- Architecture & Proof of Concept Documents
+
+If required, access can be provided upon request.
+
