@@ -297,22 +297,28 @@ docker compose up -d
 
 ---
 
-🔒 Source Code Notice
+## 🔒 Note on Artifacts & Source Structure
 
-This repository intentionally excludes application source code.
+This repository represents a **production-style DevOps implementation**.
 
-To simulate real-world enterprise practices
-To protect application-level intellectual property
-To focus this project on DevOps engineering capabilities
-The repository still includes:
+To align with real-world practices:
 
-Full CI/CD pipelines
-Infrastructure as Code (Terraform)
-Microsoft Azure PAAS architecture
-Architecture & Proof of Concept Documents
+* Published application binaries (`.dll` files) and runtime artifacts have been **moved to a private repository**
+* This public repository focuses on:
 
-📩 Source code can be shared upon request.
+  * AWS architecture
+  * CI/CD pipeline design (GitHub Actions)
+  * Containerization strategy (Docker)
+  * Deployment architecture and workflows
 
+### 🚀 What you can still evaluate here
+
+You can fully review:
+
+* End-to-end CI/CD pipeline design
+* AWS architecture
+* Deployment workflows and automation patterns
+* Container build and orchestration strategy
 
 ---
 
