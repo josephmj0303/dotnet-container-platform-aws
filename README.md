@@ -13,7 +13,7 @@ This project demonstrates how to containerize legacy or multi-application .NET w
 
 ---
 
-# 📌 Project Overview
+## 📌 Project Overview
 
 This repository contains the infrastructure and deployment configuration for hosting multiple ASP.NET Core applications on AWS using Docker containers.
 
@@ -39,13 +39,13 @@ The project demonstrates practical DevOps skills including:
 
 ---
 
-# 🏗 Architecture
+## 🏗 Architecture
 
 ![Architecture-diagram](docs/architecture/architecture-diagram.png)
 
 ---
 
-# Technology Stack
+## Technology Stack
 
 | Category                | Technology                |
 | ----------------------- | ------------------------- |
@@ -61,7 +61,7 @@ The project demonstrates practical DevOps skills including:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 dotnet-container-platform-aws
@@ -107,7 +107,7 @@ dotnet-container-platform-aws
 
 ---
 
-# Application Ports
+## Application Ports
 
 | Application  | Port |
 | ------------ | ---- |
@@ -118,7 +118,7 @@ dotnet-container-platform-aws
 
 ---
 
-# Docker Architecture
+## Docker Architecture
 
 The system uses **five containers**:
 
@@ -144,7 +144,7 @@ Docker Network
 
 ---
 
-# Environment Variables
+## Environment Variables
 
 Environment variables are stored in the `.env` file.
 
@@ -164,7 +164,7 @@ VIVA_DB_CONN=Server=mssql;Database=vivahadeepamdb;User Id=sa;Password=YourStrong
 
 ---
 
-# Database Restore
+## Database Restore
 
 Database backups are stored in:
 
@@ -187,7 +187,7 @@ Databases restored:
 
 ---
 
-# Reverse Proxy Configuration
+## Reverse Proxy Configuration
 
 Nginx routes traffic to containers based on domain.
 
@@ -210,9 +210,9 @@ Domain routing:
 
 ---
 
-# Deployment
+## Deployment
 
-## Clone Repository
+### Clone Repository
 
 ```
 git clone https://github.com/username/dotnet-container-platform-aws.git
@@ -221,7 +221,7 @@ cd dotnet-container-platform-aws
 
 ---
 
-## Build and Start Containers
+### Build and Start Containers
 
 ```
 docker compose up -d --build
@@ -229,7 +229,7 @@ docker compose up -d --build
 
 ---
 
-## Verify Running Containers
+### Verify Running Containers
 
 ```
 docker ps
@@ -247,7 +247,7 @@ mssql2022
 
 ---
 
-# Test URLs
+## Test URLs
 
 ```
 http://finance.joedevopslab.xyz
@@ -258,7 +258,7 @@ http://vivahadeepam.joedevopslab.xyz
 
 ---
 
-# CI/CD Pipeline
+## CI/CD Pipeline
 
 GitHub Actions automates the deployment workflow.
 
@@ -287,7 +287,7 @@ docker compose up -d
 
 ---
 
-# 🔐 Security Practices
+## 🔐 Security Practices
 
 * HTTPS using SSL certificates
 * Secrets management using AWS Secrets Manager
@@ -297,7 +297,26 @@ docker compose up -d
 
 ---
 
-# Future Improvements
+🔒 Source Code Notice
+
+This repository intentionally excludes application source code.
+
+To simulate real-world enterprise practices
+To protect application-level intellectual property
+To focus this project on DevOps engineering capabilities
+The repository still includes:
+
+Full CI/CD pipelines
+Infrastructure as Code (Terraform)
+Microsoft Azure PAAS architecture
+Architecture & Proof of Concept Documents
+
+📩 Source code can be shared upon request.
+
+
+---
+
+## Future Improvements
 
 Possible upgrades for a production platform:
 
@@ -310,7 +329,7 @@ Possible upgrades for a production platform:
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
 * CI/CD pipeline execution
   
@@ -328,7 +347,7 @@ Possible upgrades for a production platform:
 
 ---
 
-# Key DevOps Concepts Demonstrated
+## Key DevOps Concepts Demonstrated
 
 * Containerized microservices architecture
 * Multi-service Docker deployments
@@ -339,7 +358,7 @@ Possible upgrades for a production platform:
 
 ---
 
-# Author
+## Author
 
 DevOps Portfolio Project
 
