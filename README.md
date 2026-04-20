@@ -297,13 +297,13 @@ docker compose up -d
 
 ---
 
-## 🔒 Note on Artifacts & Source Structure
+## 🔒 Note on Source Code & DB backup files
 
 This repository represents a **production-style DevOps implementation**.
 
 To align with real-world practices:
 
-* Published application binaries (`.dll` files) and runtime artifacts have been **moved to a private repository**
+* Published application binaries (`.dll` files) and db backup files have been **moved to a private repository**
 * This public repository focuses on:
 
   * AWS architecture
